@@ -1,13 +1,14 @@
-# URL and Query Parameters
+# URL Parameters
 
-## Lesson Objectives
+So far we have created a basic app with a simple `GET` request defined which sends a string back as response.
 
-1. Read URL parameters
-1. Place routes in correct order
+What we are going to do now is accept parameters from the URL.
 
 ## Read URL parameters
 
-Most of the time, we'll use segments in the path section of the URL to modify how our application works
+Most of the time, we'll use segments in the path section of the URL to modify how our application works.
+
+In `server.js` we are going to start by adding an array of fruits as this is an app about fruits.
 
 ```javascript
 const express = require('express');
@@ -24,7 +25,7 @@ app.listen(3000,() => {
 });
 ```
 
-Now visit http://localhost:3000/fruits/0
+Now visit [http://localhost:3000/fruits/0](http://localhost:3000/fruits/0) to see what you get.
 
 ## Place routes in correct order
 
