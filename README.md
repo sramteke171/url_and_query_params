@@ -79,7 +79,7 @@ Just like you can send one parameter after each `/` like here `/fruits/:index`. 
 
 For example, get the accounts which are in active state and limit it by 50 accounts
 
-```
+```js
 /accounts?status=active&limit=50
 ```
 
@@ -87,8 +87,16 @@ However, best practice for RESTful API design is that path params are used to id
 
 For example, let's create a new route that accepts a query parameter to send number of fruit available. Make the below change in `server.js`
 
-```
-app.get('/fruits/count', (req, res) => {    let fruit = req.query.fruit    let count = fruits.filter((val) => {        return val === fruit    }).length;    res.send(`The number of available ${fruit}/s are ${count}`);})
+```js
+app.get('/fruits/count', (req, res) => {
+    let fruit = req.query.fruit
+
+    let count = fruits.filter((val) => {
+        return val === fruit
+    }).length;
+
+    res.send(`The number of available ${fruit}/s are ${count}`);
+})
 ```
 
 Notice the way to grab a query parameter in express is `req.query` which is an object with key-value pairs.
